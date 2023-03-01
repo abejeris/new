@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <p>Labas</p>
+  <h2>Modal Sign Up Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="https://testapi.io/api/audriusb/resource/login" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="name" required>
+
+      <label for="email"><b>Email Address</b></label>
+      <input type="text" placeholder="Enter email" name="email" required>
+        
+      <button type="submit">Sign Up</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+
+
+</div>
+<form id="login" action="https://testapi.io/api/audriusb/resource/login/{2}" method="get">
+    <label for="name">name here</label>
+    <input type="text" name="name" placeholder="your name"> 
+    <label for="email">email</label>
+    <input type="text" name="email" placeholder="email">
+   <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
